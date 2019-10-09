@@ -6,13 +6,34 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     userInfo:[
-        // { 
-        //   name: "Jose", 
-        //   lastname:"De la cruz",
-        //   email:"jose@some.com", 
-        //   username:"generate",
-        //   phone:123456789, 
-        // }
+        { 
+			name: "Jose", 
+			lastname:"De la cruz",
+			email:"jose@some.com", 
+			username:"generate",
+			phone:123456789, 
+		},
+		{ 
+			name: "Jose 2", 
+			lastname:"De la cruz",
+			email:"jose@some.com", 
+			username:"generate",
+			phone:123456789, 
+		},
+		{ 
+			name: "Jose 3", 
+			lastname:"De la cruz",
+			email:"jose@some.com", 
+			username:"generate",
+			phone:123456789, 
+		},
+		{ 
+			name: "Jose 4", 
+			lastname:"De la cruz",
+			email:"jose@some.com", 
+			username:"generate",
+			phone:123456789, 
+		},
     ]
   },
   mutations: {
@@ -21,7 +42,10 @@ export default new Vuex.Store({
                             lastname:newDataFromHome.inpLastName,
                             email:newDataFromHome.inpEmail,
                             phone: newDataFromHome.inpPhone})
-    }
+	},
+	deleteUserInfo(state, index){
+		state.userInfo.splice(index, 1)
+	}
 
   },
   actions: {
