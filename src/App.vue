@@ -10,6 +10,6 @@
 
 <script>
 import './assets/css/style.css'
-
+// $route.params.id
 export default {}
 </script>

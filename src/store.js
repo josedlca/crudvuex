@@ -45,6 +45,13 @@ export default new Vuex.Store({
 	},
 	deleteUserInfo(state, index){
 		state.userInfo.splice(index, 1)
+	},
+	editUserInfo(state, newDataFromEdit){
+		// state.userInfo.splice(index, 1)
+		state.userInfo.splice(newDataFromEdit.editId,1,{	name:newDataFromEdit.inpName,
+															lastname:newDataFromEdit.inpLastName,
+															email:newDataFromEdit.inpEmail,
+															phone: newDataFromEdit.inpPhone})
 	}
 
   },
