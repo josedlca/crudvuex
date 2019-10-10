@@ -17,7 +17,7 @@
 
 <script>
 	export default {
-		name: 'form-componente',
+		name: 'Formcomponente',
 
 		data(){
 			return{
