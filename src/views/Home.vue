@@ -1,19 +1,8 @@
 <template>
   <div class="home">
-    <!-- <label>Name</label>
-    <input class="border" v-model="newInfoData.inpName" type="text">
-    <br>
-    <label>Email</label>
-    <input class="border" v-model="newInfoData.inpEmail" type="text">
-    <br>
-    <label>LastName</label>
-    <input class="border" v-model="newInfoData.inpLastName" type="text">
-    <br>
-    <label>Phone</label>
-    <input class="border" v-model="newInfoData.inpPhone" type="text">
-    <br> -->
 	<Formcomponente />
-    <button @click="addUserInfo(newInfoData)">ADD INFO</button>
+    <button @click="addUserInfo(addUserInfoData)">ADD INFO</button>
+	<p class="hidden">{{getStoreInfoFromComponent}}</p>
   </div>
 </template>
 
@@ -27,16 +16,16 @@ export default {
 	},
 	name: 'home',
 
-	// data(){
-	// 	return{
-	// 	newInfoData:{
-	// 		inpName: "",
-	// 		inpLastName: "",
-	// 		inpEmail: "",
-	// 		inpPhone: ""
-	// 	}
-	// 	}
-	// },
+	data(){
+		return{
+			addUserInfoData : ""
+		}
+	},
+	computed:{
+		getStoreInfoFromComponent(){
+			return this.addUserInfoData = this.$store.state.getDataUser
+		}
+	},
 	methods:{
 		...mapMutations(['addUserInfo'])
 	}

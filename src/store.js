@@ -5,12 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-	newInfoData:{
-		inpName: "",
-		inpLastName: "",
-		inpEmail: "",
-		inpPhone: ""
-	},
+	getDataUser: [],
     userInfo:[
         { 
 			name: "Jose", 
@@ -53,12 +48,14 @@ export default new Vuex.Store({
 		state.userInfo.splice(index, 1)
 	},
 	editUserInfo(state, newDataFromEdit){
-		// state.userInfo.splice(index, 1)
 		state.userInfo.splice(newDataFromEdit.editId,1,{	name:newDataFromEdit.inpName,
 															lastname:newDataFromEdit.inpLastName,
 															email:newDataFromEdit.inpEmail,
 															phone: newDataFromEdit.inpPhone})
-	}
+	},
+	// takeInfoUser(state,formComponentData){
+	// 	state.getDataUser=formComponentData
+	// }
 
   },
   actions: {

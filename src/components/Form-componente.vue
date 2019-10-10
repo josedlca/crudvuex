@@ -11,6 +11,7 @@
 		<br>
 		<label>Phone</label>
 		<input class="border" v-model="newInfoData.inpPhone" type="text">
+		<p class="hidden">{{sendDataToStore}}</p>
 		<br>
 	</div>
 </template>
@@ -29,5 +30,10 @@
 				}
 			}
 		},
+		computed:{
+			sendDataToStore(){
+				return this.$store.state.getDataUser = this.newInfoData
+			}
+		}
 	}
 </script>

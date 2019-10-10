@@ -1,18 +1,6 @@
 <template>
 	<div>
-		<label>Name</label>
-		<input class="border" v-model="newInfoData.inpName" type="text">
-		<br>
-		<label>Email</label>
-		<input class="border" v-model="newInfoData.inpEmail" type="text">
-		<br>
-		<label>LastName</label>
-		<input class="border" v-model="newInfoData.inpLastName" type="text">
-		<br>
-		<label>Phone</label>
-		<input class="border" v-model="newInfoData.inpPhone" type="text">
-		<br>
-		
+		<Formcomponente />		
 		<button @click="editUserInfo(newInfoData)" class="mr-4">Save Changes</button>
 		<button @click="userTab">volver a la tabla</button>
 	</div>
