@@ -38,25 +38,21 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-    addUserInfo(state, newDataFromHome){
-      state.userInfo.push({ name:newDataFromHome.inpName,
-                            lastname:newDataFromHome.inpLastName,
-                            email:newDataFromHome.inpEmail,
-                            phone: newDataFromHome.inpPhone})
+    addUserInfo(state){
+      state.userInfo.push({ name:state.getDataUser["inpName"],
+                            lastname:state.getDataUser["inpLastName"],
+                            email:state.getDataUser["inpEmail"],
+                            phone: state.getDataUser["inpPhone"]})
 	},
 	deleteUserInfo(state, index){
 		state.userInfo.splice(index, 1)
 	},
-	editUserInfo(state, newDataFromEdit){
-		state.userInfo.splice(newDataFromEdit.editId,1,{	name:newDataFromEdit.inpName,
-															lastname:newDataFromEdit.inpLastName,
-															email:newDataFromEdit.inpEmail,
-															phone: newDataFromEdit.inpPhone})
-	},
-	// takeInfoUser(state,formComponentData){
-	// 	state.getDataUser=formComponentData
-	// }
-
+	editUserInfo(state){
+		state.userInfo.splice(state.getDataUser["editId"],1,{ name:state.getDataUser["inpName"],
+														lastname:state.getDataUser["inpLastName"],
+														email:state.getDataUser["inpEmail"],
+														phone: state.getDataUser["inpPhone"]})
+	}
   },
   actions: {
 

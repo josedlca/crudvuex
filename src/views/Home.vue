@@ -1,8 +1,7 @@
 <template>
   <div class="home">
 	<Formcomponente />
-    <button @click="addUserInfo(addUserInfoData)">ADD INFO</button>
-	<p class="hidden">{{getStoreInfoFromComponent}}</p>
+    <button @click="addUserInfo">ADD INFO</button>
   </div>
 </template>
 
@@ -16,16 +15,6 @@ export default {
 	},
 	name: 'home',
 
-	data(){
-		return{
-			addUserInfoData : ""
-		}
-	},
-	computed:{
-		getStoreInfoFromComponent(){
-			return this.addUserInfoData = this.$store.state.getDataUser
-		}
-	},
 	methods:{
 		...mapMutations(['addUserInfo'])
 	}

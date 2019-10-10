@@ -26,7 +26,8 @@
 					inpName: "",
 					inpLastName: "",
 					inpEmail: "",
-					inpPhone: ""
+					inpPhone: "",
+					editId: this.$route.params.id
 				}
 			}
 		},
