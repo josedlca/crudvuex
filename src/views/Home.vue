@@ -1,7 +1,9 @@
 <template>
-  <div class="home">
-	<Formcomponente />
-    <button @click="addUserInfo">ADD INFO</button>
+  <div class="home w-full">
+	<div class=" w-10/12 mx-auto">
+		<Formcomponente />
+		<button @click="addUserInfo">ADD INFO</button>
+	</div>
   </div>
 </template>
 
