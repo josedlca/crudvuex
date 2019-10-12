@@ -2,6 +2,10 @@ module.exports = {
   theme: {
     extend: {}
   },
-  variants: {},
-  plugins: []
+  variants: {
+  },
+  plugins: [],
+  corePlugins: {
+	outline: false,
+  }
 }

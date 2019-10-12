@@ -1,20 +1,20 @@
 <template>
-	<div>
-		<div>
-			<label>Name</label>
-			<input class="border" v-model="newInfoData.inpName" type="text">
+	<div class=" w-6/12 mx-auto">
+		<div class="flex justify-around mb-4">
+			<label class=" w-3/12 text-teal-500 font-normal text-xl">Name</label>
+			<input class=" w-8/12 border-b-2 border-teal-600 outline-none" v-model="newInfoData.inpName" type="text">
 		</div>
-		<div>
-			<label>Email</label>
-			<input class="border" v-model="newInfoData.inpEmail" type="text">
+		<div class="flex justify-around mb-4">
+			<label class=" w-3/12 text-teal-500 font-normal text-xl">LastName</label>
+			<input class=" w-8/12 border-b-2 border-teal-600 outline-none" v-model="newInfoData.inpLastName" type="text">
 		</div>
-		<div>
-			<label>LastName</label>
-			<input class="border" v-model="newInfoData.inpLastName" type="text">
+		<div class="flex justify-around mb-4">
+			<label class=" w-3/12 text-teal-500 font-normal text-xl">Email</label>
+			<input class=" w-8/12 border-b-2 border-teal-600 outline-none" v-model="newInfoData.inpEmail" type="text">
 		</div>
-		<div>
-			<label>Phone</label>
-			<input class="border" v-model="newInfoData.inpPhone" type="text">
+		<div class="flex justify-around mb-4">
+			<label class=" w-3/12 text-teal-500 font-normal text-xl">Phone</label>
+			<input class=" w-8/12 border-b-2 border-teal-600 outline-none" v-model="newInfoData.inpPhone" type="text">
 		</div>
 		<p class="hidden">{{sendDataToStore}}</p>
 	</div>

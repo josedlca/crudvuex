@@ -12,14 +12,14 @@
 				<div class="w-2/12 flex items-center justify-left">
 					{{item.lastname}}
 				</div>
-				<div class="w-3/12 flex items-center justify-left">
+				<div class="w-3/12 flex items-center justify-left break-all">
 					{{item.email}}
 				</div>
 				<div class="w-2/12 flex items-center justify-left">
-					{{item.username}}
+					{{item.phone}}
 				</div>
 				<div class="w-2/12 flex items-center justify-left">
-					{{item.phone}}
+					{{item.username}}
 				</div>
 				<div class="w-2/12 flex items-center justify-left">
 					<router-link class="bg-yellow-600 rounded-lg h-8 px-4 flex items-center mr-3" :to="{name: 'editUser', params: {id:index}}">
